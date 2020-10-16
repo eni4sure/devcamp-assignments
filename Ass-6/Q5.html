@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number to Words</title>
+</head>
+<body>
+	<h2 id="word"></h2>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/numbered/1.1.0/index.min.js"></script>
+	<script>
+	  let user_input = prompt("Enter a number between 0 and 50");
+
+	  if( user_input !== null && !isNaN(user_input) && user_input > 0 && user_input < 50 ) {
+
+	  	document.getElementById("word").innerHTML = numbered.stringify(user_input);
+	  } else {
+
+	    document.getElementById("word").innerHTML = 'Error!. The number should be an integer, greater than 0 and less than 50';
+	  }
+	</script>
+</body>
+</html>
